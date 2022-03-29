@@ -1,0 +1,165 @@
+﻿/*
+jQuery Plugin boxes v0.3
+by zzbaivong
+http://devs.forumvi.com/
+*/
+.zzBoxes, .zzBoxes * {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0
+}
+
+.zzBoxes_overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: none no-repeat center center #aaaaaa;
+    opacity: 0.3
+}
+
+.zzBoxes_inner {
+    background-color: #FFF;
+    color: #000394;
+    width: auto;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -100px;
+    -webkit-transition: margin .3s;
+    transition: margin .3s;
+    width: 316px;
+    height: 143px;
+}
+
+.zzBoxes.alert .zzBoxes_inner {
+    border-color: #0D58CA
+}
+
+.zzBoxes.alert .zzBoxes_title {
+    color: #0D58CA
+}
+
+.zzBoxes.confirm .zzBoxes_inner {
+    border: 1px solid red;
+    border-radius: 4px;
+    border-width: 1px !important;
+    box-shadow: 4px 7px 42px 2px rgba(77,77,77,1);
+}
+
+.zzBoxes.confirm .zzBoxes_title {
+    color: #fff
+}
+
+.zzBoxes.prompt .zzBoxes_inner {
+    border-color: #BF7C17
+}
+
+.zzBoxes.prompt .zzBoxes_title {
+    color: #BF7C17
+}
+
+.zzBoxes_title {
+    background: -webkit-linear-gradient(#9a0202, #cf1414, #9a0202);
+    background: -o-linear-gradient(#9a0202, #cf1414, #9a0202);
+    background: -moz-linear-gradient(#9a0202, #cf1414, #9a0202);
+    background: linear-gradient(#9a0202, #cf1414, #9a0202);
+    font-size: 1.4em;
+    line-height: 1.5em;
+    padding: 1% 4%;
+}
+
+.zzBoxes_content {
+    margin: 0;
+}
+
+.zzBoxes_mess {
+    background: url('/Images/question.png') no-repeat;
+    background-position: 20px 10px;
+    overflow: auto;
+    white-space: pre-line;
+    padding: 10px 70px;
+    width: 275px;
+}
+
+.zzBoxes_content img {
+    max-width: 100%;
+}
+
+.zzBoxes_input {
+    width: 100%;
+    border: 1px solid #DDD;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 10px 0 0;
+    padding: 7px
+}
+
+    .zzBoxes_input:focus {
+        box-shadow: 0 0 3px 1px #DF9711;
+        outline: 0 none;
+        border-color: #DF9711
+    }
+
+.zzBoxes_button {
+    text-align: right;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    width: 95%;
+}
+
+    .zzBoxes_button > div {
+        display: inline-block;
+        min-width: 70px;
+        background-color: #1C6DD0;
+        color: #FFF;
+        text-align: center;
+        -webkit-transition: background .3s;
+        transition: background .3s;
+        margin: 10px 12px 10px 10px;
+        padding: 5px 14px;
+    }
+
+        .zzBoxes_button > div:first-child {
+            margin-left: 0
+        }
+
+div.zzBoxes_cancel {
+    background-color: red
+}
+
+.zzBoxes_close {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    right: 2px;
+    top: 2px;
+    text-indent: -9999px;
+    background: url(img/close.png) no-repeat center center #FF4F4F;
+    opacity: 0;
+    -webkit-transition: all .3s;
+    transition: all .3s
+}
+
+.zzBoxes_inner:hover .zzBoxes_close {
+    opacity: 1
+}
+
+.zzBoxes_button > div:hover, .zzBoxes_close:hover {
+    background-color: #333;
+    cursor: pointer
+}
+
+.zzBoxes_ok, .zzBoxes_cancel {
+    width: 70px;
+    float: right;
+    border-radius: 4px;
+}
